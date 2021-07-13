@@ -9,12 +9,12 @@
     <title>Tip Calculator</title>
 </head>
 <body>
+    <img src="images/logo.svg" alt="logo" class="logo">
     <div class="container">
-        <img src="images/logo.svg" alt="logo" class="logo">
         <div class="calculator-section">
             <div class="bill">
                 <h3 class="heading">Bill</h3>
-                <input type="number" name="" id="">
+                <input class="input" type="number" name="" id="" required>
             </div>
             <div class="select-tip">
                 <h3 class="heading">Select Tip %</h3>
@@ -24,24 +24,24 @@
                     <button class="btn average-tip">15%</button>
                     <button class="btn">25%</button>
                     <button class="btn">50%</button>
-                    <button class="btn">Custom</button>
+                    <button class="btn custom">Custom</button>
                 </div>
                 <div class="no-of-people">
                     <h3 class="heading">Number of People</h3>
-                    <input type="number" name="" id="">
+                    <input class="input" type="number" name="" id="" required>
                 </div>
             </div>
         </div>
         <div class="calculation-output">
-        <div class="tip-amount">
+        <div class="tip-amount to-pay">
             <h3 class="heading heading-white">Tip Amount <br><span>/ person</span></h3>
-            <h3>$<span class="tip-amount-output">20</span></h3>
+            <h3 class="amount">$<span class="tip-amount-output">20</span></h3>
         </div>
-        <div class="total-amount">
+        <div class="total-amount to-pay">
             <h3 class="heading heading-white">Total <br><span>/ person</span></h3>
-            <h3>$<span class="total-amount-output">50</span></h3>
+            <h3 class="amount">$<span class="total-amount-output">50</span></h3>
         </div>
-        <button class="btn average-tip">RESET</button>
+        <button>RESET</button>
         </div>
     </div>
 
