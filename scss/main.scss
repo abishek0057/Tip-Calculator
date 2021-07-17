@@ -57,7 +57,7 @@ body {
 
   .bill {
     margin-bottom: 1.75rem;
-    input {
+    .input {
       background-image: url("../images/icon-dollar.svg");
       @include inputForm();
 
@@ -89,22 +89,27 @@ body {
 
         &:hover {
           cursor: pointer;
-          background-color: $light-grayish-cyan;
+          background-color: $strong-cyan;
         }
-      }
-      .average-tip {
-        color: $very-dark-cyan;
-        background-color: $strong-cyan;
       }
 
       .custom {
         background-color: $light-grayish-cyan-a;
         color: $dark-grayish-cyan;
       }
+      
+      #custom-tip{
+        @include inputForm();
+        display: none;
+        margin: 0;
+        border: none;
+        height: 45px;
+      }
     }
 
     .no-of-people {
-      input {
+      position: relative;
+      .input {
         @include inputForm();
         background-image: url("../images/icon-person.svg");
 
@@ -157,3 +162,64 @@ body {
     }
   }
 }
+.error {
+  display: none;
+  position: absolute;
+  left: 73%;
+  top: 25%;
+  color: red;
+  font-weight: 700;
+  font-size: 50%;
+}
+
+
+.needed-data{
+  display: none;
+}
+
+
+@media screen and (min-width: 1100px) {
+  body {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .logo {
+    margin: 3rem auto;
+  }
+  .container {
+    max-width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    border-radius: 23px;
+    margin: 1.8rem auto;
+    padding: 1rem;
+  }
+
+  .calculation-output {
+    .to-pay {
+      margin: 1.5rem 0;
+    }
+    .total-amount {
+      margin-top: 3rem;
+    }
+    button {
+      margin-top: 5.5rem;
+    }
+  }
+
+  .calculator-section .select-tip .percent-selection {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .error {
+    display: none;
+    position: absolute;
+    left: 75%;
+    top: 16%;
+    color: red;
+    font-weight: 700;
+    font-size: 90%;
+  }
+}
+
